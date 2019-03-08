@@ -1,0 +1,28 @@
+//CONTAINER =====
+
+body {
+	background-color: $color-background;
+}
+
+#app {
+	display: inline-table;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	// border-spacing: 5px;
+	// border-collapse: separate;
+	.header, .internal, .footer {
+		display: table-row;
+	}
+	.internal {
+		position: relative;
+		.container {
+			background-color: $color-background;
+			position: relative;
+			width: 100%;
+			height: 100%;
+		}
+	}
+}

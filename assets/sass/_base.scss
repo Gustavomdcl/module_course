@@ -1,0 +1,81 @@
+body {
+  font-weight: normal;
+  font-size: $font-size+px; //1em = 14px; 3em = 42px; 1.28em = 18px; FONTEpx/14px = FONTEem
+  font-family: 'Lato', 'Arial', sans-serif;
+  color: $color-text;
+}
+
+p {
+  margin: 10px 0;
+}
+
+img {
+  @include box-sizing(border-box);
+  max-width: 100%;
+}
+
+/* headings --------------------- */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lato', 'Arial', sans-serif;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+h1 { @include font-size(22); }
+h2 { @include font-size(20); }
+h3 { @include font-size(18); }
+h4 { @include font-size(16); }
+h5 { @include font-size(14); }
+h6 { @include font-size(12); }
+
+/* links ------------------------ */
+
+a {
+  text-decoration: none;
+  color: $color-link;
+}
+
+/* classes ------------------------ */
+
+.centralize {
+  text-align:center;
+  vertical-align: middle;
+}
+
+
+.hidden {
+  opacity: 0;
+}
+
+.linear {
+  display: inline-table;
+  border-spacing: 5px;
+  &>ul {
+    display: table-row;
+    &>li {
+      display: table-cell;
+    }
+  }
+}
+
+.mobile-on {
+  display: none;
+  @include responsivo(max-width, $broken) {
+    display: block;
+  }
+}
+
+.desktop-on {
+  display: block;
+  @include responsivo(max-width, $broken) {
+    display: none;
+  }
+}
+
+.canvas-container {
+  position: relative;
+  &>* {
+    position: absolute;
+  }
+}

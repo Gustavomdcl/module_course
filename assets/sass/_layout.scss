@@ -1,0 +1,33 @@
+.table {
+  display: inline-table;
+  border-spacing: $column-padding;
+  width: 100%;
+  height:100%;
+  @include responsivo(max-width, $broken) {
+    display: inline-block;
+    height: inherit;
+  }
+}
+
+.row {
+  display: table-row;
+  @include responsivo(max-width, $broken) {
+    display: block;
+  }
+}
+
+[class*=column] {
+  @include box-sizing(border-box);
+  display: table-cell;
+}
+
+$column_width: percentage(1/$num_columns);
+@for $i from 1 through $num_columns {
+  .column#{$i} {
+    width: $i * $column_width;
+    @include responsivo(max-width, $broken) {
+      display: block;
+      width: 100%;
+    }
+  }
+}

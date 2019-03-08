@@ -1,0 +1,49 @@
+/* AJUSTES RÁPIDOS NO SERVIDOR */
+
+#app {
+	width: 960px;
+	left: 50%;
+	margin-left: -480px;
+	padding: 40px 0px;
+	box-sizing: border-box;
+}
+
+@media (max-width: 960px) {
+	#app {
+		width: 100%;
+		left: 0px;
+		margin-left: 0px;
+		padding: 0px;
+		box-sizing: border-box;
+	}
+}
+
+.header {
+	height: 100px;
+	background-color: #fff;
+}
+
+.menu {
+	width: 100%;
+	border-spacing: 15px;
+}
+
+.menu ul li {
+    text-align: center;
+    position: relative;
+}
+
+.menu ul li+li:before {
+    content: '>';
+    position: absolute;
+    left: -10px;
+}
+
+.internal {
+	background-color: #e4e4e4;
+}
+
+.footer {
+	height: 50px;
+	background-color: #fff;
+}
